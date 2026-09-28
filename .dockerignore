@@ -1,0 +1,13 @@
+node_modules
+reports
+test-results
+blob-report
+allure-results
+allure-report
+.git
+.env
+.env.*
+!.env.example
+
+all-blob-reports/
+playwright-report/

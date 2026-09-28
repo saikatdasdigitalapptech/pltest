@@ -1,0 +1,11 @@
+node_modules
+reports
+test-results
+allure-results
+allure-report
+blob-report
+package-lock.json
+docs/validation
+
+all-blob-reports/
+playwright-report/

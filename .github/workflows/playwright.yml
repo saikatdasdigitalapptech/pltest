@@ -1,0 +1,104 @@
+name: AI Commerce quality
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      suite:
+        description: Suite to execute
+        type: choice
+        default: smoke
+        options: [smoke, regression, cross-browser, mobile, audit, api, all]
+permissions:
+  contents: read
+concurrency:
+  group: playwright-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  quality:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:framework
+        env:
+          CI: 'true'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: framework-checks
+          path: reports/
+          retention-days: 7
+  test:
+    needs: quality
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        shard: [1, 2]
+    env:
+      CI: 'true'
+      TEST_ENV: ${{ vars.TEST_ENV || 'production' }}
+      BASE_URL: ${{ vars.BASE_URL || 'https://digitalaptech.com' }}
+      WORKERS: 1
+      RETRIES: 1
+      TEST_SUITE: ${{ inputs.suite || 'smoke' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium firefox webkit
+      - name: Execute shard
+        run: node scripts/run-suite.mjs "$TEST_SUITE" --shard=${{ matrix.shard }}/2
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: blob-report-${{ matrix.shard }}
+          path: blob-report/
+          retention-days: 7
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: evidence-${{ matrix.shard }}
+          path: |
+            reports/
+            test-results/
+          retention-days: 7
+  merge:
+    if: ${{ !cancelled() }}
+    needs: test
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: blob-report-*
+          path: all-blob-reports
+          merge-multiple: true
+      - run: npm run report:merge
+        env:
+          PLAYWRIGHT_HTML_OUTPUT_DIR: reports/merged-html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: merged-playwright-report
+          path: reports/merged-html/
+          retention-days: 14

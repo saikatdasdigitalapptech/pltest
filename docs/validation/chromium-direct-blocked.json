@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "total": 171,
+  "expected": 0,
+  "unexpected": 0,
+  "flaky": 0,
+  "skipped": 171,
+  "durationMs": 232.476,
+  "note": "CI fails on unexpected failures and flaky tests. Skipped optional suites are not passes."
+}

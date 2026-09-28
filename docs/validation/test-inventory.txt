@@ -1,0 +1,178 @@
+
+> digital-aptech-ai-commerce-playwright@1.0.0 test:list
+> playwright test --list
+
+Listing tests:
+  [chromium] › forms/submission.spec.ts:10:7 › Intercepted lead submission @regression @forms @mocked › AIC-060 valid details produce multipart data and follow the configured redirect
+  [chromium] › forms/submission.spec.ts:38:7 › Intercepted lead submission @regression @forms @mocked › AIC-061 server validation error is associated with the field
+  [chromium] › forms/submission.spec.ts:58:7 › Intercepted lead submission @regression @forms @mocked › AIC-062 HTTP 500 gives a recoverable error
+  [chromium] › forms/submission.spec.ts:70:7 › Intercepted lead submission @regression @forms @mocked › AIC-063 malformed response gives an error without navigation
+  [chromium] › forms/submission.spec.ts:84:7 › Intercepted lead submission @regression @forms @mocked › AIC-064 failed network request restores the button
+  [chromium] › forms/submission.spec.ts:93:7 › Intercepted lead submission @regression @forms @mocked › AIC-065 pending submission disables repeat clicks
+  [chromium] › forms/submission.spec.ts:118:7 › Intercepted lead submission @regression @forms @mocked › AIC-066 Unicode name is accepted by client validation
+  [chromium] › forms/uploads.spec.ts:11:7 › Attachment validation @regression @forms › AIC-050 accepted text attachment displays its filename and can be cleared
+  [chromium] › forms/uploads.spec.ts:24:7 › Attachment validation @regression @forms › AIC-051 unsupported file extension is rejected
+  [chromium] › forms/uploads.spec.ts:38:7 › Attachment validation @regression @forms › AIC-052 file above 5 MiB is rejected before a request
+  [chromium] › forms/uploads.spec.ts:52:7 › Attachment validation @regression @forms › AIC-053 file exactly 5 MiB reaches the intercepted endpoint
+  [chromium] › forms/validation.spec.ts:10:7 › Lead validation @regression @forms › AIC-040 empty submission shows field errors and focuses name
+  [chromium] › forms/validation.spec.ts:69:9 › Lead validation @regression @forms › AIC-041 rejects single-character name
+  [chromium] › forms/validation.spec.ts:69:9 › Lead validation @regression @forms › AIC-042 rejects digits in name
+  [chromium] › forms/validation.spec.ts:69:9 › Lead validation @regression @forms › AIC-043 rejects missing email domain
+  [chromium] › forms/validation.spec.ts:69:9 › Lead validation @regression @forms › AIC-044 rejects email without at sign
+  [chromium] › forms/validation.spec.ts:69:9 › Lead validation @regression @forms › AIC-045 rejects whitespace-only company
+  [chromium] › forms/validation.spec.ts:78:7 › Lead validation @regression @forms › AIC-046 editing an invalid value clears its error
+  [chromium] › forms/validation.spec.ts:86:7 › Lead validation @regression @forms › AIC-047 service and region contracts match the published choices
+  [chromium] › forms/validation.spec.ts:95:7 › Lead validation @regression @forms › AIC-048 text fields enforce their documented maxlength
+  [chromium] › forms/validation.spec.ts:102:7 › Lead validation @regression @forms › AIC-049 one-digit phone is rejected when provided
+  [chromium] › smoke/commerce.spec.ts:8:7 › AI Commerce smoke @smoke › AIC-001 page identity and primary conversion CTA
+  [chromium] › smoke/commerce.spec.ts:15:7 › AI Commerce smoke @smoke › AIC-002 eight capability cards are present
+  [chromium] › smoke/commerce.spec.ts:19:7 › AI Commerce smoke @smoke › AIC-003 lead form is available with the correct default service
+  [chromium] › smoke/commerce.spec.ts:26:7 › AI Commerce smoke @smoke › AIC-004 Book a Call dialog opens and closes
+  [chromium] › ui/booking-dialog.spec.ts:9:7 › Book a Call wrapper @regression › AIC-030 switching tabs displays the corresponding form
+  [chromium] › ui/booking-dialog.spec.ts:23:7 › Book a Call wrapper @regression › AIC-031 Escape dismisses the dialog
+  [chromium] › ui/booking-dialog.spec.ts:28:7 › Book a Call wrapper @regression › AIC-032 booking iframe has the expected provider and title
+  [chromium] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-010 bot card reaches its detail
+  [chromium] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-011 behaviour card reaches its detail
+  [chromium] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-012 personalisation card reaches its detail
+  [chromium] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-013 recommendations card reaches its detail
+  [chromium] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-014 search card reaches its detail
+  [chromium] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-015 conversational card reaches its detail
+  [chromium] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-016 engagement card reaches its detail
+  [chromium] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-017 marketing card reaches its detail
+  [chromium] › ui/navigation.spec.ts:24:7 › Navigation @regression › AIC-018 hero roadmap CTA reaches contact form
+  [chromium] › ui/navigation.spec.ts:29:7 › Navigation @regression › AIC-019 See what we build reaches capabilities
+  [chromium] › ui/navigation.spec.ts:36:7 › Navigation @regression › AIC-020 stack CTA reaches contact
+  [chromium] › ui/navigation.spec.ts:41:7 › Navigation @regression › AIC-021 Services menu contains the current service
+  [firefox] › forms/submission.spec.ts:10:7 › Intercepted lead submission @regression @forms @mocked › AIC-060 valid details produce multipart data and follow the configured redirect
+  [firefox] › forms/submission.spec.ts:38:7 › Intercepted lead submission @regression @forms @mocked › AIC-061 server validation error is associated with the field
+  [firefox] › forms/submission.spec.ts:58:7 › Intercepted lead submission @regression @forms @mocked › AIC-062 HTTP 500 gives a recoverable error
+  [firefox] › forms/submission.spec.ts:70:7 › Intercepted lead submission @regression @forms @mocked › AIC-063 malformed response gives an error without navigation
+  [firefox] › forms/submission.spec.ts:84:7 › Intercepted lead submission @regression @forms @mocked › AIC-064 failed network request restores the button
+  [firefox] › forms/submission.spec.ts:93:7 › Intercepted lead submission @regression @forms @mocked › AIC-065 pending submission disables repeat clicks
+  [firefox] › forms/submission.spec.ts:118:7 › Intercepted lead submission @regression @forms @mocked › AIC-066 Unicode name is accepted by client validation
+  [firefox] › forms/uploads.spec.ts:11:7 › Attachment validation @regression @forms › AIC-050 accepted text attachment displays its filename and can be cleared
+  [firefox] › forms/uploads.spec.ts:24:7 › Attachment validation @regression @forms › AIC-051 unsupported file extension is rejected
+  [firefox] › forms/uploads.spec.ts:38:7 › Attachment validation @regression @forms › AIC-052 file above 5 MiB is rejected before a request
+  [firefox] › forms/uploads.spec.ts:52:7 › Attachment validation @regression @forms › AIC-053 file exactly 5 MiB reaches the intercepted endpoint
+  [firefox] › forms/validation.spec.ts:10:7 › Lead validation @regression @forms › AIC-040 empty submission shows field errors and focuses name
+  [firefox] › forms/validation.spec.ts:69:9 › Lead validation @regression @forms › AIC-041 rejects single-character name
+  [firefox] › forms/validation.spec.ts:69:9 › Lead validation @regression @forms › AIC-042 rejects digits in name
+  [firefox] › forms/validation.spec.ts:69:9 › Lead validation @regression @forms › AIC-043 rejects missing email domain
+  [firefox] › forms/validation.spec.ts:69:9 › Lead validation @regression @forms › AIC-044 rejects email without at sign
+  [firefox] › forms/validation.spec.ts:69:9 › Lead validation @regression @forms › AIC-045 rejects whitespace-only company
+  [firefox] › forms/validation.spec.ts:78:7 › Lead validation @regression @forms › AIC-046 editing an invalid value clears its error
+  [firefox] › forms/validation.spec.ts:86:7 › Lead validation @regression @forms › AIC-047 service and region contracts match the published choices
+  [firefox] › forms/validation.spec.ts:95:7 › Lead validation @regression @forms › AIC-048 text fields enforce their documented maxlength
+  [firefox] › forms/validation.spec.ts:102:7 › Lead validation @regression @forms › AIC-049 one-digit phone is rejected when provided
+  [firefox] › smoke/commerce.spec.ts:8:7 › AI Commerce smoke @smoke › AIC-001 page identity and primary conversion CTA
+  [firefox] › smoke/commerce.spec.ts:15:7 › AI Commerce smoke @smoke › AIC-002 eight capability cards are present
+  [firefox] › smoke/commerce.spec.ts:19:7 › AI Commerce smoke @smoke › AIC-003 lead form is available with the correct default service
+  [firefox] › smoke/commerce.spec.ts:26:7 › AI Commerce smoke @smoke › AIC-004 Book a Call dialog opens and closes
+  [firefox] › ui/booking-dialog.spec.ts:9:7 › Book a Call wrapper @regression › AIC-030 switching tabs displays the corresponding form
+  [firefox] › ui/booking-dialog.spec.ts:23:7 › Book a Call wrapper @regression › AIC-031 Escape dismisses the dialog
+  [firefox] › ui/booking-dialog.spec.ts:28:7 › Book a Call wrapper @regression › AIC-032 booking iframe has the expected provider and title
+  [firefox] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-010 bot card reaches its detail
+  [firefox] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-011 behaviour card reaches its detail
+  [firefox] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-012 personalisation card reaches its detail
+  [firefox] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-013 recommendations card reaches its detail
+  [firefox] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-014 search card reaches its detail
+  [firefox] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-015 conversational card reaches its detail
+  [firefox] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-016 engagement card reaches its detail
+  [firefox] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-017 marketing card reaches its detail
+  [firefox] › ui/navigation.spec.ts:24:7 › Navigation @regression › AIC-018 hero roadmap CTA reaches contact form
+  [firefox] › ui/navigation.spec.ts:29:7 › Navigation @regression › AIC-019 See what we build reaches capabilities
+  [firefox] › ui/navigation.spec.ts:36:7 › Navigation @regression › AIC-020 stack CTA reaches contact
+  [firefox] › ui/navigation.spec.ts:41:7 › Navigation @regression › AIC-021 Services menu contains the current service
+  [webkit] › forms/submission.spec.ts:10:7 › Intercepted lead submission @regression @forms @mocked › AIC-060 valid details produce multipart data and follow the configured redirect
+  [webkit] › forms/submission.spec.ts:38:7 › Intercepted lead submission @regression @forms @mocked › AIC-061 server validation error is associated with the field
+  [webkit] › forms/submission.spec.ts:58:7 › Intercepted lead submission @regression @forms @mocked › AIC-062 HTTP 500 gives a recoverable error
+  [webkit] › forms/submission.spec.ts:70:7 › Intercepted lead submission @regression @forms @mocked › AIC-063 malformed response gives an error without navigation
+  [webkit] › forms/submission.spec.ts:84:7 › Intercepted lead submission @regression @forms @mocked › AIC-064 failed network request restores the button
+  [webkit] › forms/submission.spec.ts:93:7 › Intercepted lead submission @regression @forms @mocked › AIC-065 pending submission disables repeat clicks
+  [webkit] › forms/submission.spec.ts:118:7 › Intercepted lead submission @regression @forms @mocked › AIC-066 Unicode name is accepted by client validation
+  [webkit] › forms/uploads.spec.ts:11:7 › Attachment validation @regression @forms › AIC-050 accepted text attachment displays its filename and can be cleared
+  [webkit] › forms/uploads.spec.ts:24:7 › Attachment validation @regression @forms › AIC-051 unsupported file extension is rejected
+  [webkit] › forms/uploads.spec.ts:38:7 › Attachment validation @regression @forms › AIC-052 file above 5 MiB is rejected before a request
+  [webkit] › forms/uploads.spec.ts:52:7 › Attachment validation @regression @forms › AIC-053 file exactly 5 MiB reaches the intercepted endpoint
+  [webkit] › forms/validation.spec.ts:10:7 › Lead validation @regression @forms › AIC-040 empty submission shows field errors and focuses name
+  [webkit] › forms/validation.spec.ts:69:9 › Lead validation @regression @forms › AIC-041 rejects single-character name
+  [webkit] › forms/validation.spec.ts:69:9 › Lead validation @regression @forms › AIC-042 rejects digits in name
+  [webkit] › forms/validation.spec.ts:69:9 › Lead validation @regression @forms › AIC-043 rejects missing email domain
+  [webkit] › forms/validation.spec.ts:69:9 › Lead validation @regression @forms › AIC-044 rejects email without at sign
+  [webkit] › forms/validation.spec.ts:69:9 › Lead validation @regression @forms › AIC-045 rejects whitespace-only company
+  [webkit] › forms/validation.spec.ts:78:7 › Lead validation @regression @forms › AIC-046 editing an invalid value clears its error
+  [webkit] › forms/validation.spec.ts:86:7 › Lead validation @regression @forms › AIC-047 service and region contracts match the published choices
+  [webkit] › forms/validation.spec.ts:95:7 › Lead validation @regression @forms › AIC-048 text fields enforce their documented maxlength
+  [webkit] › forms/validation.spec.ts:102:7 › Lead validation @regression @forms › AIC-049 one-digit phone is rejected when provided
+  [webkit] › smoke/commerce.spec.ts:8:7 › AI Commerce smoke @smoke › AIC-001 page identity and primary conversion CTA
+  [webkit] › smoke/commerce.spec.ts:15:7 › AI Commerce smoke @smoke › AIC-002 eight capability cards are present
+  [webkit] › smoke/commerce.spec.ts:19:7 › AI Commerce smoke @smoke › AIC-003 lead form is available with the correct default service
+  [webkit] › smoke/commerce.spec.ts:26:7 › AI Commerce smoke @smoke › AIC-004 Book a Call dialog opens and closes
+  [webkit] › ui/booking-dialog.spec.ts:9:7 › Book a Call wrapper @regression › AIC-030 switching tabs displays the corresponding form
+  [webkit] › ui/booking-dialog.spec.ts:23:7 › Book a Call wrapper @regression › AIC-031 Escape dismisses the dialog
+  [webkit] › ui/booking-dialog.spec.ts:28:7 › Book a Call wrapper @regression › AIC-032 booking iframe has the expected provider and title
+  [webkit] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-010 bot card reaches its detail
+  [webkit] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-011 behaviour card reaches its detail
+  [webkit] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-012 personalisation card reaches its detail
+  [webkit] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-013 recommendations card reaches its detail
+  [webkit] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-014 search card reaches its detail
+  [webkit] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-015 conversational card reaches its detail
+  [webkit] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-016 engagement card reaches its detail
+  [webkit] › ui/navigation.spec.ts:10:9 › Navigation @regression › AIC-017 marketing card reaches its detail
+  [webkit] › ui/navigation.spec.ts:24:7 › Navigation @regression › AIC-018 hero roadmap CTA reaches contact form
+  [webkit] › ui/navigation.spec.ts:29:7 › Navigation @regression › AIC-019 See what we build reaches capabilities
+  [webkit] › ui/navigation.spec.ts:36:7 › Navigation @regression › AIC-020 stack CTA reaches contact
+  [webkit] › ui/navigation.spec.ts:41:7 › Navigation @regression › AIC-021 Services menu contains the current service
+  [mobile-chrome] › responsive/layout.spec.ts:9:7 › Responsive layout @responsive › AIC-070 page has no horizontal overflow
+  [mobile-chrome] › responsive/layout.spec.ts:13:7 › Responsive layout @responsive › AIC-071 lead form controls remain inside the viewport
+  [mobile-chrome] › responsive/layout.spec.ts:32:7 › Responsive layout @responsive › AIC-072 mobile menu opens and closes
+  [mobile-chrome] › responsive/layout.spec.ts:41:7 › Responsive layout @responsive › AIC-073 hero text has horizontal breathing room
+  [mobile-chrome] › responsive/layout.spec.ts:51:7 › Responsive layout @responsive › AIC-074 320px layout still fits
+  [mobile-chrome] › smoke/commerce.spec.ts:8:7 › AI Commerce smoke @smoke › AIC-001 page identity and primary conversion CTA
+  [mobile-chrome] › smoke/commerce.spec.ts:15:7 › AI Commerce smoke @smoke › AIC-002 eight capability cards are present
+  [mobile-chrome] › smoke/commerce.spec.ts:19:7 › AI Commerce smoke @smoke › AIC-003 lead form is available with the correct default service
+  [mobile-chrome] › smoke/commerce.spec.ts:26:7 › AI Commerce smoke @smoke › AIC-004 Book a Call dialog opens and closes
+  [mobile-safari] › responsive/layout.spec.ts:9:7 › Responsive layout @responsive › AIC-070 page has no horizontal overflow
+  [mobile-safari] › responsive/layout.spec.ts:13:7 › Responsive layout @responsive › AIC-071 lead form controls remain inside the viewport
+  [mobile-safari] › responsive/layout.spec.ts:32:7 › Responsive layout @responsive › AIC-072 mobile menu opens and closes
+  [mobile-safari] › responsive/layout.spec.ts:41:7 › Responsive layout @responsive › AIC-073 hero text has horizontal breathing room
+  [mobile-safari] › responsive/layout.spec.ts:51:7 › Responsive layout @responsive › AIC-074 320px layout still fits
+  [mobile-safari] › smoke/commerce.spec.ts:8:7 › AI Commerce smoke @smoke › AIC-001 page identity and primary conversion CTA
+  [mobile-safari] › smoke/commerce.spec.ts:15:7 › AI Commerce smoke @smoke › AIC-002 eight capability cards are present
+  [mobile-safari] › smoke/commerce.spec.ts:19:7 › AI Commerce smoke @smoke › AIC-003 lead form is available with the correct default service
+  [mobile-safari] › smoke/commerce.spec.ts:26:7 › AI Commerce smoke @smoke › AIC-004 Book a Call dialog opens and closes
+  [tablet] › responsive/layout.spec.ts:9:7 › Responsive layout @responsive › AIC-070 page has no horizontal overflow
+  [tablet] › responsive/layout.spec.ts:13:7 › Responsive layout @responsive › AIC-071 lead form controls remain inside the viewport
+  [tablet] › responsive/layout.spec.ts:32:7 › Responsive layout @responsive › AIC-072 mobile menu opens and closes
+  [tablet] › responsive/layout.spec.ts:41:7 › Responsive layout @responsive › AIC-073 hero text has horizontal breathing room
+  [tablet] › responsive/layout.spec.ts:51:7 › Responsive layout @responsive › AIC-074 320px layout still fits
+  [tablet] › smoke/commerce.spec.ts:8:7 › AI Commerce smoke @smoke › AIC-001 page identity and primary conversion CTA
+  [tablet] › smoke/commerce.spec.ts:15:7 › AI Commerce smoke @smoke › AIC-002 eight capability cards are present
+  [tablet] › smoke/commerce.spec.ts:19:7 › AI Commerce smoke @smoke › AIC-003 lead form is available with the correct default service
+  [tablet] › smoke/commerce.spec.ts:26:7 › AI Commerce smoke @smoke › AIC-004 Book a Call dialog opens and closes
+  [audit] › accessibility/accessibility.spec.ts:9:7 › Accessibility @a11y › AIC-080 page WCAG A/AA automated scan
+  [audit] › accessibility/accessibility.spec.ts:13:7 › Accessibility @a11y › AIC-081 lead validation state automated scan
+  [audit] › accessibility/accessibility.spec.ts:19:7 › Accessibility @a11y › AIC-082 dialog has modal semantics and an accessible name
+  [audit] › accessibility/accessibility.spec.ts:26:7 › Accessibility @a11y › AIC-083 opening dialog moves focus inside; Tab stays inside
+  [audit] › accessibility/accessibility.spec.ts:44:7 › Accessibility @a11y › AIC-084 closing dialog restores focus to trigger
+  [audit] › performance/navigation.spec.ts:9:5 › AIC-110 navigation timing @performance
+  [audit] › seo/metadata.spec.ts:9:7 › Content and metadata @seo › AIC-090 page has one H1, language, description, canonical, and viewport
+  [audit] › seo/metadata.spec.ts:25:7 › Content and metadata @seo › AIC-091 capability and CTA fragment links resolve to unique elements
+  [audit] › seo/metadata.spec.ts:38:7 › Content and metadata @seo › AIC-092 meaningful main images load and carry alt text
+  [audit] › seo/metadata.spec.ts:54:7 › Content and metadata @seo › AIC-093 footer policy links use HTTPS and the correct origin
+  [api] › api/public-site.spec.ts:5:7 › Public HTTP contracts @api › AIC-100 AI Commerce returns HTML with the expected identity
+  [api] › api/public-site.spec.ts:15:7 › Public HTTP contracts @api › AIC-101 document headers are captured and do not expose a PHP version
+  [api] › api/public-site.spec.ts:44:9 › Public HTTP contracts @api › AIC-102 /privacy-policy/ is reachable without redirect
+  [api] › api/public-site.spec.ts:44:9 › Public HTTP contracts @api › AIC-103 /cookie-policy/ is reachable without redirect
+  [api] › api/public-site.spec.ts:44:9 › Public HTTP contracts @api › AIC-104 /terms-and-conditions/ is reachable without redirect
+  [framework] › framework/config.spec.ts:5:5 › FW-001 environment parser rejects accidental production staging
+  [framework] › framework/config.spec.ts:12:5 › FW-002 booleans are parsed explicitly
+  [framework] › framework/config.spec.ts:18:5 › FW-003 credentials and cross-origin paths are rejected
+  [framework] › framework/config.spec.ts:24:5 › FW-004 write classification and evidence URL redaction
+  [framework] › framework/lead-stub.spec.ts:6:5 › FW-006 lead stub captures a real browser multipart body
+  [framework] › framework/write-guard.spec.ts:6:5 › FW-005 browser writes are blocked or mocked before reaching the server
+  [visual] › visual/commerce-visual.spec.ts:15:7 › Reviewed visual baselines @visual › AIC-120 desktop hero
+  [visual] › visual/commerce-visual.spec.ts:20:7 › Reviewed visual baselines @visual › AIC-121 capability grid
+  [visual] › visual/commerce-visual.spec.ts:25:7 › Reviewed visual baselines @visual › AIC-122 lead form
+  [scheduler] › integrations/scheduler.spec.ts:4:5 › AIC-130 live booking provider renders its consultation view @scheduler
+Total: 172 tests in 16 files
